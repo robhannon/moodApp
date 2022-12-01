@@ -1,7 +1,10 @@
-var express = require('express')
+var express = require('express');
 var axios = require('axios');
 
+
 const app = express();
+
+
 
 app.get("/", (req, res, next) => {
     return res.send("Mood App");
