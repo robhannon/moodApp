@@ -2,6 +2,8 @@ import { useState } from "react";
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
+let ce = false;
+
 const Create = () => {
     const { loginWithRedirect, isAuthenticated } = useAuth0();
     const [location, setLocation] = useState('');
@@ -20,6 +22,7 @@ const Create = () => {
                 method: 'GET'
             }).then(response => response.text())
             .then(result => {console.log(result);
+                ce = false;
                 document.getElementById("return").innerHTML = result})
             .catch(error => console.log('error', error));
         } else if (toDo.td == "spotify") {
@@ -27,6 +30,7 @@ const Create = () => {
                 method: 'GET'
             }).then(response => response.text())
             .then(result => {console.log(result);
+                ce = false;
                 document.getElementById("return").innerHTML = result})
             .catch(error => console.log('error', error));
         } else if (toDo.td == "songs") {
@@ -34,6 +38,7 @@ const Create = () => {
                 method: 'GET'
             }).then(response => response.text())
             .then(result => {console.log(result);
+                ce = false;
                 document.getElementById("return").innerHTML = result})
             .catch(error => console.log('error', error));
         } else {
@@ -41,6 +46,7 @@ const Create = () => {
                 method: 'GET'
             }).then(response => response.text())
             .then(result => {console.log(result);
+                ce = true;
                 document.getElementById("return").innerHTML = result})
             .catch(error => console.log('error', error));
         }
@@ -98,4 +104,6 @@ const Create = () => {
     }
 }
 
+
 export default Create;
+export var choice_event = ce;

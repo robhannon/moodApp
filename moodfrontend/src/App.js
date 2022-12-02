@@ -3,6 +3,7 @@ import Create from "./hw3"
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import UserData from './components/userData';
+import Hello from './components/hello'
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <LogoutButton />
         <UserData/>
         <Create/>
+        <Hello/>
       </header>
     </div>
   );
 }
 
-export default App;
+export default App
