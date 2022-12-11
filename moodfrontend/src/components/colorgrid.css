@@ -1,0 +1,33 @@
+.scb1 {background-color: #282c34; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb2 {background-color: #0494EC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb3 {background-color: #BC84DC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb4 {background-color: #74BB43; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb5 {background-color: #B3240B; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb6 {background-color: #FCE4B4; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb7 {background-color: #0494EC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb8 {background-color: #BC84DC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb9 {background-color: #74BB43; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb10 {background-color: #B3240B; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb11 {background-color: #FCE4B4; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb12 {background-color: #0494EC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb13 {background-color: #BC84DC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb14 {background-color: #74BB43; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb15 {background-color: #B3240B; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb16 {background-color: #B3240B; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb17 {background-color: #FCE4B4; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb18 {background-color: #0494EC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb19 {background-color: #BC84DC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb20 {background-color: #74BB43; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb21 {background-color: #B3240B; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb22 {background-color: #FCE4B4; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb23 {background-color: #0494EC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb24 {background-color: #BC84DC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb25 {background-color: #74BB43; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb26 {background-color: #B3240B; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb27 {background-color: #FCE4B4; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+.scb28 {background-color: #0494EC; width: 50px; height: 50px; padding: 10px; border: none; pointer-events: none;}
+
+.confirm {width: 1200px;}
+
+.container {display: flex;}
+.column {flex: 100%;}

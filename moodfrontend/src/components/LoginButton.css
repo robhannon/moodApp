@@ -1,0 +1,11 @@
+.LoginButton {
+    background-color: transparent;
+    border-radius: 50px 50px 50px 50px;
+    font-size: calc(30px + 2vmin);
+    color: white;
+    font-weight: bold;
+    padding: 4%;
+    border-width: 3px;
+    border-color: white;
+}
+

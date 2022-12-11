@@ -1,0 +1,79 @@
+button {font-size: 80px; border-style: solid; }
+button:active {background-color: white;}
+.choice{
+    margin-right:5%;
+    background-color: transparent;
+    border-radius: 50px 50px 50px 50px;
+    border-width: 3px;
+    border-color: white;
+    font-size: calc(25px + 2vmin);
+    color: white;
+    font-weight: bold;
+    padding: 2%;
+}
+.input_box{
+    background-color: transparent;
+    color: white;
+    border-color: #FAF9F6;
+    border-width: 2px;
+    border-radius: 50px 50px 50px 50px;
+    font-size: calc(25px + 2vmin);
+    border-top-style: solid;
+    border-left-style: solid;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.submit_button{
+    background-color: transparent;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-color: #FAF9F6;
+    border-radius: 50px 50px 50px 50px;
+    font-size: calc(25px + 2vmin);
+    font-weight: bold;
+    border-width: 3px;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-top-style: solid;
+    border-left-style: solid;
+}
+.yellow {
+    background-color: rgb(248, 248, 72);
+    border: none;
+    width: 150px;
+    height: 150px;
+}
+.orange{
+    background-color: rgb(246, 172, 34);
+    border: none;
+    width: 150px;
+    height: 150px;
+}
+.purple{
+    background-color: rgb(238, 45, 238);
+    border: none;
+    width: 150px;
+    height: 150px;
+}
+.green{
+    background-color: rgb(160, 232, 53);
+    border: none;
+    width: 150px;
+    height: 150px;
+}
+.red{
+    background-color: rgb(246, 47, 47);
+    border: none;
+    width: 150px;
+    height: 150px;
+}
+.blue {
+    background-color: rgb(66, 66, 247);
+    border: none;
+    width: 150px;
+    height: 150px;
+}
+    

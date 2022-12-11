@@ -1,14 +1,67 @@
 var express = require('express');
 var axios = require('axios');
-
-
+var request = require('request');
 const app = express();
-
-
 
 app.get("/", (req, res, next) => {
     return res.send("Mood App");
 });
+
+app.get("/topsongs", (req, res, next) => {
+    const axios = require("axios");
+
+    const options = {
+        method: 'GET',
+        url: 'https://billboard-charts-rankings.p.rapidapi.com/hot-100',
+        params: {count: '10'},
+        headers: {
+            'X-RapidAPI-Key': 'cbf6b7a501mshad84250a313a531p16f97ejsna06570b95bed',
+            'X-RapidAPI-Host': 'billboard-charts-rankings.p.rapidapi.com'
+    }
+    };
+
+    axios.request(options).then(function (response) {
+	    return_val = ""
+            for (let i = 0; i<10; i++){
+                if (i!=9){
+                    return_val += (response.data[i].song_name) + "," + "\n";
+                } else {
+                    return_val += (response.data[i].song_name) + "\n";
+        }}
+        console.log(return_val);
+        return res.send(return_val)
+    }).catch(function (error) {
+	    console.error(error);
+    });
+})
+
+app.get("/topartists", (req, res, next) => {
+    const axios = require("axios");
+
+    const options = {
+        method: 'GET',
+        url: 'https://billboard-charts-rankings.p.rapidapi.com/top-artists',
+        params: {count: '10'},
+        headers: {
+            'X-RapidAPI-Key': 'cbf6b7a501mshad84250a313a531p16f97ejsna06570b95bed',
+            'X-RapidAPI-Host': 'billboard-charts-rankings.p.rapidapi.com'
+    }
+    };
+
+    axios.request(options).then(function (response) {
+	    return_val = ""
+            for (let i = 0; i<10; i++){
+                if (i!=9){
+                    return_val += (response.data[i].artist_name) + "," + "\n";
+                } else {
+                    return_val += (response.data[i].artist_name) + "\n";
+        }}
+        console.log(return_val);
+        return res.send(return_val)
+    }).catch(function (error) {
+	    console.error(error);
+    });
+})
 
 app.get("/spotify", (req, res, next) => {
     const options = {
@@ -99,7 +152,7 @@ app.get("/event", (req, res, next) => {
     const params = {
         device: "desktop",
         engine: "google_events",
-        q: req.query.type + " in " + req.query.location,
+        q: req.query.type + " in Boston",
         google_domain: "google.com",
         hl: "en",
         gl: "us",
@@ -124,6 +177,51 @@ app.get("/event", (req, res, next) => {
     search.json(params, callback);
 
   });
+
+  app.get("/songs", (req, res, next) => {
+    var options = {
+        'method': 'GET',
+        'url': 'https://spotify-scraper.p.rapidapi.com/v1/search?term=' + req.query.artist,
+        'headers': {
+          'X-RapidAPI-Key': 'cbf6b7a501mshad84250a313a531p16f97ejsna06570b95bed',
+          'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com'
+        }
+      };
+      request(options, function (error, response) {
+        if (error) throw new Error(error);
+        json_resp = JSON.parse(response.body)
+        id = json_resp.artists.items[0].id
+        setTimeout(function () {relatedSongs(id)}, 1100);
+        console.log(id);
+      });
+
+
+    function relatedSongs (artist) {
+    const options1 = {
+    method: 'GET',
+    url: 'https://spotify-scraper.p.rapidapi.com/v1/artist/overview',
+    qs: {artistId: artist},
+    headers: {
+      'X-RapidAPI-Key': 'cbf6b7a501mshad84250a313a531p16f97ejsna06570b95bed',
+      'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com',
+      useQueryString: true
+    }
+    };
+  
+    request(options1, function (error, response, body) {
+      if (error) throw new Error(error);
+      return_val = ""
+            for (let i = 0; i<10; i++){
+                if (i!=9){
+                    return_val += (JSON.parse(body).discography.topTracks[i].name) + "," + "\n";
+                } else {
+                    return_val += (JSON.parse(body).discography.topTracks[i].name) + "\n";
+            }}
+            console.log(return_val)
+            return res.send(return_val)
+
+    });
+    }});
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

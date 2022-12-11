@@ -1,0 +1,15 @@
+.logout {
+    margin-right:5%;
+    background-color: transparent;
+    border-radius: 50px 50px 50px 50px;
+    border-width: 3px;
+    border-color: transparent;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    font-weight: bold;
+    padding: 1%;
+    position: absolute;
+    top: 15px;
+    right: -40px;
+}
+

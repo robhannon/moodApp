@@ -1,0 +1,13 @@
+button {font-size: 80px;}
+button:active {background-color: white;}
+
+.scb1 {background-color: #fefe3d; width: 100px; transition-duration: 0.1s; border: none;}
+.scb2 {background-color: #0494ec; width: 100px; transition-duration: 0.1s; border: none;}
+.scb3 {background-color: #b84af7; width: 100px; transition-duration: 0.1s; border: none;}
+.scb4 {background-color: #69fc07; width: 100px; transition-duration: 0.1s; border: none;}
+.scb5 {background-color: #f82c08; width: 100px; transition-duration: 0.1s; border: none;}
+
+.confirm {width: 200px;}
+
+.container {display: flex;}
+.column {flex: 50%;}
